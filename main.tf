@@ -17,7 +17,7 @@ provider "google" {
 }
 
 
-#### RECURSOS NO GCP #####
+#### RECURSO NO GCP #####
 
 # Cria uma VM no Google Cloud
 resource "google_compute_instance" "firstvm" {
