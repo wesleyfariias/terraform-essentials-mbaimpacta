@@ -1,21 +1,3 @@
-#### SETUP GOOGLE ####
-terraform {
-  required_providers {
-    google = {
-      source = "hashicorp/google"
-    }
-  }
-}
-
-# Configura o Provider Google Cloud com o Projeto
-provider "google" {
-  version = "3.5.0"
-
-  project = "wesley-cloudautomation"
-  region  = "us-central1"
-  zone    = "us-central1-c"
-}
-
 
 #### RECURSO NO GCP #####
 
@@ -23,7 +5,7 @@ provider "google" {
 resource "google_compute_instance" "firstvm" {
   name         = "website"
   machine_type = "n1-standard-1"
-  zone         = "us-central1-c"
+  zone         = var.gcp_zone
   tags         = ["website", "impacta"]
 
   # Defini a Imagem da VM
