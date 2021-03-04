@@ -1,2 +1,2 @@
 # Variáveis do GCP
-gcp_project   = "wesley-cloudautomation"
+gcp_project   = "wesley-cloudautomation-306522"
