@@ -15,11 +15,4 @@ provider "google" {
   region  = var.gcp_region
   zone    = var.gcp_zone
 
-
-# Configura o Provider Microsoft Azure
-provider "azurerm" {
-  version         = "=2.20.0"
-
-  features {}
-}
 }
