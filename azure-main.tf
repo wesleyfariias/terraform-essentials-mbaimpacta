@@ -125,7 +125,6 @@ resource "azurerm_linux_virtual_machine" "firstvm" {
     sku       = "18.04-LTS"
     version   = "latest"
   }
-
   tags = {
     environment = "Terraform Multi Cloud"
   }
