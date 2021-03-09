@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "myresourcegroup" {
-    name     = "LabMultiCloud2"
+    name     = "LabMultiCloud"
     location = var.rg_location
 
     tags = {
@@ -113,6 +113,7 @@ resource "azurerm_linux_virtual_machine" "firstvm" {
   admin_password                  = var.azurevm_admin_pass
   network_interface_ids = [azurerm_network_interface.myterraformnic.id]
   disable_password_authentication = "false"
+  custom_data = filebase64("azure-user-data.sh")
 
   os_disk {
     caching              = "ReadWrite"
@@ -125,6 +126,7 @@ resource "azurerm_linux_virtual_machine" "firstvm" {
     sku       = "18.04-LTS"
     version   = "latest"
   }
+
   tags = {
     environment = "Terraform Multi Cloud"
   }
