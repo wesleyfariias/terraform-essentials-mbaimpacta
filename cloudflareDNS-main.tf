@@ -1,4 +1,3 @@
-
 #Cria uma entrada DNS para o Azure 
 resource "cloudflare_record" "azure-dns" { 
   zone_id = var.cloudflare_zone_id 
