@@ -90,7 +90,7 @@ resource "azurerm_network_interface" "myterraformnic" {
         public_ip_address_id          = azurerm_public_ip.myterraformpublicip.id
     }
 
-    tags = {
+ tags = {
         environment = "Terraform Multi Cloud"
     }
 }
